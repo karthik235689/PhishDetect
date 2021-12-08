@@ -129,7 +129,7 @@ def web_traffic(url):
 
 '''
 10. Google_Index
-'''
+''' 
 def Google_Index(url):
   site=search(url, 15)
   if site:
@@ -252,7 +252,7 @@ def forwarding(response):
 18. Links_pointing_to_page
 '''    
 
-def Links_pointing_to_page(url):
+def Links_pointing_to_page(url): 
   if response == "":
     return 1
   else:
@@ -265,7 +265,7 @@ def Links_pointing_to_page(url):
       return 0
 
 ''' 
-19. Submitting_to_email
+19. Submitting_to_email 1
 '''
 
 def check_email(url):
@@ -284,6 +284,23 @@ def check_email(url):
 
 # 18. Using URL Shortening Services “TinyURL”
 
+#listing shortening services
+shortening_services = r"bit\.ly|goo\.gl|shorte\.st|go2l\.ink|x\.co|ow\.ly|t\.co|tinyurl|tr\.im|is\.gd|cli\.gs|" \
+                      r"yfrog\.com|migre\.me|ff\.im|tiny\.cc|url4\.eu|twit\.ac|su\.pr|twurl\.nl|snipurl\.com|" \
+                      r"short\.to|BudURL\.com|ping\.fm|post\.ly|Just\.as|bkite\.com|snipr\.com|fic\.kr|loopt\.us|" \
+                      r"doiop\.com|short\.ie|kl\.am|wp\.me|rubyurl\.com|om\.ly|to\.ly|bit\.do|t\.co|lnkd\.in|db\.tt|" \
+                      r"qr\.ae|adf\.ly|goo\.gl|bitly\.com|cur\.lv|tinyurl\.com|ow\.ly|bit\.ly|ity\.im|q\.gs|is\.gd|" \
+                      r"po\.st|bc\.vc|twitthis\.com|u\.to|j\.mp|buzurl\.com|cutt\.us|u\.bb|yourls\.org|x\.co|" \
+                      r"prettylinkpro\.com|scrnch\.me|filoops\.info|vzturl\.com|qr\.net|1url\.com|tweez\.me|v\.gd|" \
+                      r"tr\.im|link\.zip\.net"
+
+def tinyURL(url):
+    match=re.search(shortening_services,url)
+    if match:
+        return 1
+    else:
+        return 0
+        
 #Function to extract features
 def featureExtraction(url):
 
