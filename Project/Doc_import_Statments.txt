@@ -1,0 +1,86 @@
+from urllib.parse import urlparse
+
+It mainly parse a URL (Uniform resource locator) returns a 6-item named tuple.For example :
+
+--> urlparse("https://drive.google.com:8080/drive/folders/1F0PpUbQpELToEyudxDVXfjOkJLUYzk3d")
+--> ParseResult(scheme='https', netloc='drive.google.com:8080', path='/drive/folders/1F0PpUbQpELToEyudxDVXfjOkJLUYzk3d', params='', query='', fragment='')
+
+Netloc -> Contains the network location - which includes the domain itself (and subdomain if present), 
+the port number, along with an optional credentials in form of username:password . Together it may take form of username:password@domain.com:80 . 
+
+import re :
+
+^	Starts with
+
+quote()
+This function replaces special characters in string using the %xx escape (Escape codes). Letters, digits, and the characters '_.-~' are never quoted.
+
+>>> from urllib.parse import quote
+>>> q = quote(url)
+'https%3A//mail.google.com/mail/u/0/%3Ftab%3Drm%23inbox'
+
+unquote()
+This function replaces %xx escapes by their single-character equivalent.
+
+>>> from urllib.parse import unquote
+>>> unquote(q)
+'https://mail.google.com/mail/u/0/?tab = rm#inbox'
+
+The isinstance() function returns True if the specified object is of the specified type, otherwise False.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2. Checks for the presence of IP address in the URL. 
+If an IP address is used as an alternative of the domain name in the URL, we can be sure that someone is trying to steal personal information with this URL.
+If the domain part of URL has IP address, the value assigned to this feature is 1 (phishing) or else 0 (legitimate).
+
+3. Checking ampersand "@" Symbol in URL.
+Checks for the presence of '@' symbol in the URL. Using “@” symbol in the URL leads the browser to ignore everything preceding the “@” symbol and the real address often follows the “@” symbol. 
+If the URL has '@' symbol, the value assigned to this feature is 1 (phishing) or else 0 (legitimate).
+
+9. WEB TRAFFIC 
+This feature measures the popularity of the website by determining the number of visitors and the number of pages they visit. 
+However, since phishing websites live for a short period of time, they may not be recognized by the Alexa database (Alexa the Web Information Company., 1996). 
+By reviewing our dataset, we find that in worst scenarios, legitimate websites ranked among the top 100,000. 
+Furthermore, if the domain has no traffic or is not recognized by the Alexa database, it is classified as “Phishing”.
+If the rank of the domain < 100000, the vlaue of this feature is 1 (phishing) else 0 (legitimate).
+
+10. AGE OF DOMAIN
+This feature can be extracted from WHOIS database. Most phishing websites live for a short period of time. 
+The minimum age of the legitimate domain is considered to be 12 months for this project. 
+Age here is nothing but different between creation and expiration time.
+
+15. Mouseover (Status Bar Customization)
+Phishers may use JavaScript to show a fake URL in the status bar to users. To extract this feature, we must dig-out the webpage source code, 
+particularly the “onMouseOver” event, and check if it makes any changes on the status bar. 
+Rule: 
+(onMouseOver Changes Status Bar→ Phishing
+It Does't Change Status Bar→Legitimate)┤
+
+
+18. Number of Links Pointing to Page 
+The number of links pointing to the webpage indicates its legitimacy level, even if some links are of the same domain. 
+In our datasets and due to its short life span, we find that 98% of phishing dataset items have no links pointing to them. 
+On the other hand, legitimate websites have at least 2 external links pointing to them
+
+19. Submitting Information to Email
+Web form allows a user to submit his personal information that is directed to a server for processing. 
+A phisher might redirect the user’s information to his personal email. To that end, a server-side script language might be used such as “mail()” function in PHP. 
+One more client-side function that might be used for this purpose is the “mailto:” function. 
+Rule: IF{█(Using ""mail()\" or \"mailto:\" Function to Submit User Information" → Phishing@Otherwise  → Legitimate)┤
