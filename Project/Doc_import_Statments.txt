@@ -83,4 +83,5 @@ On the other hand, legitimate websites have at least 2 external links pointing t
 Web form allows a user to submit his personal information that is directed to a server for processing. 
 A phisher might redirect the user’s information to his personal email. To that end, a server-side script language might be used such as “mail()” function in PHP. 
 One more client-side function that might be used for this purpose is the “mailto:” function. 
-Rule: IF{█(Using ""mail()\" or \"mailto:\" Function to Submit User Information" → Phishing@Otherwise  → Legitimate)┤
+Rule: Using ""mail()\" or \"mailto:\" Function to Submit User Information" → Phishing
+Otherwise  → Legitimate)┤
