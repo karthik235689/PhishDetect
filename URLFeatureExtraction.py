@@ -8,13 +8,13 @@ import re
 """#### **3.1.1. Domain of the URL**
 Here, we are just extracting the domain present in the URL. This feature doesn't have much significance in the training. May even be dropped while training the model.
 """
-'''
+
 # 1.Domain of the URL (Domain) 
 def getDomain(url):  
   domain = urlparse(url).netloc
   if re.match(r"^www.",domain):
 	       domain = domain.replace("www.","")
-  return domain'''
+  return domain
 
 """#### **3.1.2. IP Address in the URL**
 
@@ -340,6 +340,18 @@ def forwarding(response):
     else:
       return 1
 
+def Links_pointing_to_page(response): 
+  if response == "":
+    return 1
+  else:
+    number_of_links = len(re.findall(r"<a href=", response.text))
+    if number_of_links == 0:
+      return 1
+    elif number_of_links <= 2:
+      return 1
+    else:
+      return 0
+      
 """## **4. Computing URL Features**
 
 Create a list and a function that calls the other functions and stores all the features of the URL in the list. We will extract the features of each URL and append to this list.
@@ -382,11 +394,13 @@ def featureExtraction(url):
   features.append(mouseOver(response))
   features.append(rightClick(response))
   features.append(forwarding(response))
+  features.append(Links_pointing_to_page(response))
+  
   
   return features
 
 #converting the list to dataframe
-feature_names = ['Domain', 'Have_IP', 'Have_At', 'URL_Length', 'URL_Depth','Redirection', 
+feature_names = ['Have_IP', 'Have_At', 'URL_Length', 'URL_Depth','Redirection', 
                       'https_Domain', 'TinyURL', 'Prefix/Suffix', 'DNS_Record', 'Web_Traffic', 
-                      'Domain_Age', 'Domain_End', 'iFrame', 'Mouse_Over','Right_Click', 'Web_Forwards', 'Label']
+                      'Domain_Age', 'Domain_End', 'iFrame', 'Mouse_Over','Right_Click', 'Web_Forwards','Links_pointing_to_page', 'Label']
 
