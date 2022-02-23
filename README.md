@@ -1,6 +1,10 @@
 # PhishDetect
 > Be **Aware** Be **Secured** Be **Safe**
 
+
+![Screenshot (9)](https://user-images.githubusercontent.com/53186985/155356522-0e348639-5314-4d0c-9b6f-a21935dd568c.png)
+
+
 ## Overview of the project
 Phishing is a type of social engineering attack often used to steal user data, including login credentials and credit card numbers. It occurs when an attacker, masquerading as a trusted entity, dupes a victim into opening an email, instant message, or text message. The recipient is then tricked into clicking a malicious link.
 Phishing is one of the luring techniques used by phishing artist in the intention of exploiting the personal details of unsuspected users. Phishing website is a mock website that looks similar in appearance but different in destination. The unsuspected users post their data thinking that these websites come from trusted financial institutions. Several antiphishing techniques emerge continuously but phishers come with new technique by breaking all the antiphishing mechanisms. Hence there is a need for efficient mechanism for the prediction of phishing website.
