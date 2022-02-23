@@ -199,9 +199,9 @@ def web_traffic(url):
   except TypeError:
         return 1
   if rank <100000:
-    return 1
+    return rank
   else:
-    return 0
+    return rank
 
 """#### **3.2.3. Age of Domain**
 
@@ -400,7 +400,9 @@ def featureExtraction(url):
   return features
 
 #converting the list to dataframe
-feature_names = ['Have_IP', 'Have_At', 'URL_Length', 'URL_Depth','Redirection', 
+'''feature_names = ['Have_IP', 'Have_At', 'URL_Length', 'URL_Depth','Redirection', 
                       'https_Domain', 'TinyURL', 'Prefix/Suffix', 'DNS_Record', 'Web_Traffic', 
                       'Domain_Age', 'Domain_End', 'iFrame', 'Mouse_Over','Right_Click', 'Web_Forwards','Links_pointing_to_page', 'Label']
-
+'''
+a=web_traffic("https://www.kmit.com")
+print(a)

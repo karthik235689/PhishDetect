@@ -580,6 +580,7 @@ illiberal-session.000webhostapp.com,0,0,0,0,0,0,0,1,0,1,0,1,0,0,1,0,1
 buzzfil.net,0,0,1,3,0,0,0,0,0,0,1,1,0,0,1,0,0
 zoohanpro.com,0,0,1,2,0,0,0,0,0,1,1,1,0,0,1,0,1
 500px.com,0,0,1,2,0,0,1,0,0,1,0,0,0,0,1,0,0
+Domain,Have_IP,Have_At,URL_Length,URL_Depth,Redirection,https_Domain,Tiny_URL,Prefix/Suffix,DNS_Record,Web_Traffic,Domain_Age,Domain_End,iFrame,Mouse_Over,Right_Click,Web_Forwards,Label
 gtbank.com,0,0,1,5,0,0,0,0,0,1,0,1,0,0,1,0,0
 deadspin.com,0,0,1,2,0,0,0,0,0,1,1,0,0,0,1,0,0
 pikabu.ru,0,0,1,2,0,0,0,0,0,1,0,1,1,1,1,1,0
@@ -9999,3 +10000,4 @@ stackoverflow.com,0,0,1,3,0,0,0,0,0,1,0,1,0,0,1,0,0
 nectaribate.com.br,0,0,0,3,0,0,0,0,0,1,1,1,0,0,1,0,1
 udn.com,0,0,1,4,0,0,0,0,0,1,0,1,0,0,1,0,0
 thenextweb.com,0,0,1,5,0,0,0,0,0,1,0,0,0,0,1,0,0
+,,,,,,,,,,,,,,,,,

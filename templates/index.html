@@ -1,43 +1,129 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Phishdetect
-        </title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">PhishDetect</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>PhishDetect | Home</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/unicons.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" >
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}" >
+
+
+    <!-- MAIN STYLE -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" >
+    
+  </head>
+  <body>
+
+    <!-- MENU -->
+    <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> PhishDetect</a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/detect">Detect</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="/about">About us</a>
-                  </li>
+                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link"><span data-hover="Home">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/detect" class="nav-link"><span data-hover="Detect">Detect</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/about" class="nav-link"><span data-hover="About">About</span></a>
+                    </li>
                 </ul>
-              </div>
-            </div>
-          </nav>
 
-          <div class="p-5 mb-4 bg-light rounded-3">
-            <div class="container-fluid py-5">
-              <h1 class="display-5 fw-bold">Phishing Attack</h1>
-              <p class="col-md-8 fs-4">Phishing is a type of social engineering attack often used to steal user data, including login credentials and credit card numbers. It occurs when an attacker, masquerading as a trusted entity, dupes a victim into opening an email, instant message, or text message. The recipient is then tricked into clicking a malicious link, which can lead to the installation of malware, the freezing of the system as part of a ransomware attack or the revealing of sensitive information.</p>
-              <a class="btn btn-primary btn-lg" href="detect">Examine a URL</a>
+                <ul class="navbar-nav ml-lg-auto">
+                    <div class="ml-lg-4">
+                      <div class="color-mode d-lg-flex justify-content-center align-items-center">
+                        <i class="color-mode-icon"></i>
+                        Color mode
+                      </div>
+                    </div>
+                </ul>
             </div>
+        </div>
+    </nav>
+
+
+    <section class="about full-screen d-lg-flex justify-content-center align-items-center" id="about">
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-lg-7 col-md-12 col-12 d-flex align-items-center">
+                    <div class="about-text">
+                        <small class="small-text">Welcome to <span class="mobile-block">Phishing Detect !</span></small>
+                        <h1 class="animated animated-text">
+                            <span class="mr-2">Hey folks, Be</span>
+                                <div class="animated-info">
+                                    <span class="animated-item">Aware</span>
+                                    <span class="animated-item">Secured</span>
+                                    <span class="animated-item">Safe</span>
+                                </div>
+                        </h1>
+
+                        <p>The main motive of this webpage is to detect Phishing URLs</p>
+                        
+                        <div class="custom-btn-group mt-4">
+                          <a href="/detect" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i>Detect</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-12 col-12">
+                    <div class="about-image svg">
+                        <img src="{{ url_for('static', filename='images/undraw/undraw_software_engineer_lvl5.svg') }}" class="img-fluid" alt="svg image">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    
+    <section>
+      <div class="container">
+        <div class="row">
+          <h1 class="display-9 fw-bold">Phishing Attack</h1>
+          <p class="col-md-12 fs-4">Phishing is a type of social engineering attack often used to steal user data, including login credentials and credit card numbers. It occurs when an attacker, masquerading as a trusted entity, dupes a victim into opening an email, instant message, or text message. The recipient is then tricked into clicking a malicious link, which can lead to the installation of malware, the freezing of the system as part of a ransomware attack or the revealing of sensitive information.</p>
+                    </div>
+                    </div>
+    </section>
+
+
+    <!-- FOOTER -->
+     <footer class="footer py-5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-lg-12 col-12">                                
+                        <p class="copyright-text text-center">PhishDetect</a></p>
+                    </div>
+                    
+               </div>
           </div>
+     </footer>
 
-          
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    </body>
+     <script src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/Headroom.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/jQuery.headroom.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/smoothscroll.js') }}"></script>
+     <script src="{{ url_for('static', filename='js/custom.js') }}"></script>
+ 
+  </body>
 </html>
