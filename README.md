@@ -15,27 +15,39 @@ The below mentioned category of features are extracted from the URL data:
 * Address Bar based Features\
           In this category 9 features are extracted.\
           1.Domain of the URL\
-          2.havingIP\
-          3.haveAtSign\
-          4.getLength\
-          5.getDepth\
-          6.redirection\
-          7.httpDomain\
-          8.shortening services\
-          9.PrefixSuffix\
+          2.HavingIP\
+          3.HaveAtSign\
+          4.GetLength\
+          5.GetDepth\
+          6.Redirection\
+          7.HttpDomain\
+          8.Shortening services\
+          9.PrefixSuffix
 * Domain based Features\
           In this category 4 features are extracted.\
           1.DNS Record\
           2.Website Traffic\ 
           3.Age of Domain\
-          4.End Period of Domain\
+          4.End Period of Domain
 * HTML & Javascript based Features\
           In this category 4 features are extracted.\
           1.IFrame Redirection\
           2.Status Bar Customization\
           3.Disabling Right Click\
-          4.Website Forwarding\
+          4.Website Forwarding
+
+The details to extract these features are mentioned in the URL Feature Extraction.ipynb
+
+## Models Used
+
+* Decision Tree
+* Random Forest
+* XGBoost
+* Support Vector Machines
+
+## Installation
 
 
+## 
 
-          
+> This project is done by Students of Keshav Memorial Institute of Technology as Mini Project.
