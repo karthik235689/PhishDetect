@@ -45,7 +45,7 @@ The details to extract these features are mentioned in the URL Feature Extractio
 * XGBoost
 * Support Vector Machines
 
-## Installation
+## Installation and Steps to run the code.
 
 
 ## 
