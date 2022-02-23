@@ -1,11 +1,6 @@
 # PhishDetect
 > Be **Aware** Be **Secured** Be **Safe**
 
-
-![Capture](https://user-images.githubusercontent.com/53186985/155356710-8b0c32ab-aa66-409e-a308-6b6b85f11c76.PNG)
-
-
-
 ## Overview of the project
 Phishing is a type of social engineering attack often used to steal user data, including login credentials and credit card numbers. It occurs when an attacker, masquerading as a trusted entity, dupes a victim into opening an email, instant message, or text message. The recipient is then tricked into clicking a malicious link.
 Phishing is one of the luring techniques used by phishing artist in the intention of exploiting the personal details of unsuspected users. Phishing website is a mock website that looks similar in appearance but different in destination. The unsuspected users post their data thinking that these websites come from trusted financial institutions. Several antiphishing techniques emerge continuously but phishers come with new technique by breaking all the antiphishing mechanisms. Hence there is a need for efficient mechanism for the prediction of phishing website.
@@ -53,6 +48,13 @@ The details to extract these features are mentioned in the URL Feature Extractio
 ## Installation and Steps to run the code.
 
 
+## Screenshots
+
+![Capture](https://user-images.githubusercontent.com/53186985/155356710-8b0c32ab-aa66-409e-a308-6b6b85f11c76.PNG)
+
+![as](https://user-images.githubusercontent.com/53186985/155380184-9d1f84b5-a1b2-4099-a37a-9a7f5137210a.PNG)
+
 ## 
 
 > This project is done by Students of Keshav Memorial Institute of Technology as Mini Project.
+
