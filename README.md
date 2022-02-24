@@ -47,7 +47,11 @@ The details to extract these features are mentioned in the URL Feature Extractio
 
 ## Installation and Steps to run the code.
 
-
+Install the requirements.txt by using the commands given below:\
+    1. Open cmd from location where code is stored.\
+    2. Enter the command pip install -r requirements.txt\
+    3. Then all the required libraries are installed.\
+    4. Run the code app.py
 ## Screenshots
 
 ![Capture](https://user-images.githubusercontent.com/53186985/155356710-8b0c32ab-aa66-409e-a308-6b6b85f11c76.PNG)
