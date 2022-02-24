@@ -7,7 +7,7 @@ Phishing is one of the luring techniques used by phishing artist in the intentio
 
 ## Data Collection
 
-The set of phishing URLs are collected from opensource service called  **PhishTank**. To download the data:  [https://www.phishtank.com/developer_info.php](https://www.phishtank.com/developer_info.php). From this dataset, 5000 random phishing URLs are collected to train the ML models.
+The set of phishing URLs are collected from opensource service called  **PhishTank**. To download the data:  [https://www.phishtank.com/developer_info.php](https://www.phishtank.com/developer_info.php). From this dataset, 5000 random phishing URLs are collected to train the Machine Learning models.
 
 ## Feature Extraction
 The below mentioned category of features are extracted from the URL data:
@@ -48,6 +48,13 @@ The details to extract these features are mentioned in the URL Feature Extractio
 ## Installation and Steps to run the code.
 
 
+## Screenshots
+
+![Capture](https://user-images.githubusercontent.com/53186985/155356710-8b0c32ab-aa66-409e-a308-6b6b85f11c76.PNG)
+
+![as](https://user-images.githubusercontent.com/53186985/155380184-9d1f84b5-a1b2-4099-a37a-9a7f5137210a.PNG)
+
 ## 
 
 > This project is done by Students of Keshav Memorial Institute of Technology as Mini Project.
+
