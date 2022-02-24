@@ -13,7 +13,7 @@ Here, we are just extracting the domain present in the URL. This feature doesn't
 def getDomain(url):  
   domain = urlparse(url).netloc
   if re.match(r"^www.",domain):
-	       domain = domain.replace("www.","")
+    domain = domain.replace("www.","")
   return domain
 
 """#### **3.1.2. IP Address in the URL**
@@ -105,11 +105,10 @@ If the URL has "http/https" in the domain part, the value assigned to this featu
 
 # 7.Existence of “HTTPS” Token in the Domain Part of the URL (https_Domain)
 def httpDomain(url):
-  domain = urlparse(url).netloc
-  if 'https' in domain:
-    return 1
-  else:
+  if 'https' in url:
     return 0
+  else:
+    return 1
 
 """#### **3.1.8. Using URL Shortening Services “TinyURL”**
 
@@ -167,7 +166,7 @@ Each of these features are explained and the coded below:
 # importing required packages for this section
 import re
 from bs4 import BeautifulSoup
-#import whois
+import whois
 import urllib
 import urllib.request
 from datetime import datetime
@@ -199,9 +198,9 @@ def web_traffic(url):
   except TypeError:
         return 1
   if rank <100000:
-    return rank
+    return 1
   else:
-    return rank
+    return 0
 
 """#### **3.2.3. Age of Domain**
 
@@ -394,7 +393,7 @@ def featureExtraction(url):
   features.append(mouseOver(response))
   features.append(rightClick(response))
   features.append(forwarding(response))
-  features.append(Links_pointing_to_page(response))
+  #features.append(Links_pointing_to_page(response))
   
   
   return features
@@ -402,7 +401,7 @@ def featureExtraction(url):
 #converting the list to dataframe
 '''feature_names = ['Have_IP', 'Have_At', 'URL_Length', 'URL_Depth','Redirection', 
                       'https_Domain', 'TinyURL', 'Prefix/Suffix', 'DNS_Record', 'Web_Traffic', 
-                      'Domain_Age', 'Domain_End', 'iFrame', 'Mouse_Over','Right_Click', 'Web_Forwards','Links_pointing_to_page', 'Label']
+                      'Domain_Age', 'Domain_End', 'iFrame', 'Mouse_Over','Right_Click', 'Web_Forwards', 'Label']
 '''
-a=web_traffic("https://www.kmit.com")
+a=featureExtraction("https://olx.in")
 print(a)
