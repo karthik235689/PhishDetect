@@ -52,6 +52,13 @@ Install the requirements.txt by using the commands given below:\
     2. Enter the command pip install -r requirements.txt\
     3. Then all the required libraries are installed.\
     4. Run the code app.py
+    
+For running as docker :\
+    1.Install Docker.\
+    2.run docker build . -t <name for image>
+    3.run docker images (copy the imageid of the respective project)
+    4.run docker run -it -p 5000:5000 <image id>
+          
 ## Screenshots
 
 ![Capture](https://user-images.githubusercontent.com/53186985/155356710-8b0c32ab-aa66-409e-a308-6b6b85f11c76.PNG)
