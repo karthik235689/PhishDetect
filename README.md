@@ -55,8 +55,8 @@ Install the requirements.txt by using the commands given below:\
     
 For running as docker :\
     1.Install Docker.\
-    2.run docker build . -t <name for image>
-    3.run docker images (copy the imageid of the respective project)
+    2.run docker build . -t <name for image>\
+    3.run docker images (copy the imageid of the respective project)\
     4.run docker run -it -p 5000:5000 <image id>
           
 ## Screenshots
